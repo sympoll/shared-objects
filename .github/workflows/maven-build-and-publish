@@ -1,0 +1,27 @@
+name: Publish Maven Package
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '**/README.md'
+      - '.github/workflows/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '17'
+
+      - name: Build and Publish
+        run: mvn clean deploy --settings settings.xml
+        env:
+          GH_TOKEN: ${{ secrets.GTHB_TOKEN }}
