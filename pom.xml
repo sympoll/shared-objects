@@ -7,6 +7,13 @@
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
+  <distributionManagement>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/sympoll/shared-objects</url>
+        </repository>
+    </distributionManagement>
+
   <name>shared-objects</name>
   <url>http://maven.apache.org</url>
 
