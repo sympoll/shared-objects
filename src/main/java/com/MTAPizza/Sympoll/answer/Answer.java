@@ -18,12 +18,12 @@ public class Answer {
     @Column(name = "answer_text")
     private String answerText;
     @Column(name = "num_of_votes")
-    private long numOfVotes;
+    private int numOfVotes;
 
     public Answer() {
     }
 
-    public Answer(int answerID, int pollID, int ordinal, String answerText, long numberOfVotes) {
+    public Answer(int answerID, int pollID, int ordinal, String answerText, int numberOfVotes) {
         this.answerID = answerID;
         this.pollID = pollID;
         this.ordinal = ordinal;
@@ -47,7 +47,7 @@ public class Answer {
         return answerText;
     }
 
-    public long getNumOfVotes() {
+    public int getNumOfVotes() {
         return numOfVotes;
     }
 }
