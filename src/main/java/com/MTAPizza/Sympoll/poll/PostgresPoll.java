@@ -50,35 +50,71 @@ public class PostgresPoll {
         return pollID;
     }
 
+    public void setPollID(int pollID) {
+        this.pollID = pollID;
+    }
+
     public String getTitle() {
         return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getDescription() {
         return description;
     }
 
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     public String getCreator() {
         return creator;
+    }
+
+    public void setCreator(String creator) {
+        this.creator = creator;
     }
 
     public int getGroupID() {
         return groupID;
     }
 
+    public void setGroupID(int groupID) {
+        this.groupID = groupID;
+    }
+
     public int getNumAnswersAllowed() {
         return numAnswersAllowed;
+    }
+
+    public void setNumAnswersAllowed(int numAnswersAllowed) {
+        this.numAnswersAllowed = numAnswersAllowed;
     }
 
     public long getTimeCreated() {
         return timeCreated;
     }
 
+    public void setTimeCreated(long timeCreated) {
+        this.timeCreated = timeCreated;
+    }
+
     public long getTimeUpdated() {
         return timeUpdated;
     }
 
+    public void setTimeUpdated(long timeUpdated) {
+        this.timeUpdated = timeUpdated;
+    }
+
     public long getTimeEnds() {
         return timeEnds;
+    }
+
+    public void setTimeEnds(long timeEnds) {
+        this.timeEnds = timeEnds;
     }
 }
