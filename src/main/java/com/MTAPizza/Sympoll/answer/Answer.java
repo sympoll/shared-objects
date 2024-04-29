@@ -1,28 +1,53 @@
 package com.MTAPizza.Sympoll.answer;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "answer_options")
 public class Answer {
-    private int answerNo;
-    private String answerContent;
-    private long numberOfVotes;
+    @Id
+    @Column(name = "answer_id", nullable = false)
+    private int answerID;
+    @Column(name = "poll_id", nullable = false)
+    private int pollID;
+    @Column(name = "ordinal", nullable = false)
+    private int ordinal;
+    @Column(name = "answer_text")
+    private String answerText;
+    @Column(name = "num_of_votes")
+    private long numOfVotes;
 
-    public Answer(int answerNo, String answerDet) {
-        this.answerNo = answerNo;
-        this.answerContent = answerDet;
+    public Answer() {
     }
 
-    public int getAnswerNo() {
-        return answerNo;
+    public Answer(int answerID, int pollID, int ordinal, String answerText, long numberOfVotes) {
+        this.answerID = answerID;
+        this.pollID = pollID;
+        this.ordinal = ordinal;
+        this.answerText = answerText;
+        this.numOfVotes = numberOfVotes;
     }
 
-    public String getAnswerContent() {
-        return answerContent;
+    public int getAnswerID() {
+        return answerID;
     }
 
-    public long getNumberOfVotes() {
-        return numberOfVotes;
+    public int getPollID() {
+        return pollID;
     }
 
-    public void setNumberOfVotes(long numberOfVotes) {
-        this.numberOfVotes = numberOfVotes;
+    public int getOrdinal() {
+        return ordinal;
+    }
+
+    public String getAnswerText() {
+        return answerText;
+    }
+
+    public long getNumOfVotes() {
+        return numOfVotes;
     }
 }
