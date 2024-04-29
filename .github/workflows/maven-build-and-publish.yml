@@ -24,4 +24,3 @@ jobs:
         run: mvn clean deploy --settings settings.xml
         env:
           GH_TOKEN: ${{ secrets.GTHB_TOKEN }}
-
