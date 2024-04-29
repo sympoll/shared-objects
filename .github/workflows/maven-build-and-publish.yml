@@ -6,7 +6,6 @@ on:
       - main
     paths-ignore:
       - '**/README.md'
-      - '.github/workflows/**'
       - '**/settings.xml'
       - '**/.gitignore'
 
