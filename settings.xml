@@ -2,7 +2,7 @@
   <servers>
     <server>
       <id>github</id>
-      <username>ronenii</username>
+      <username>sympoll</username>
       <password>${secrets.GTHB_TOKEN}</password>
     </server>
   </servers>
