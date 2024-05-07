@@ -6,6 +6,7 @@ on:
       - main
     paths-ignore:
       - '**/settings.xml'
+      - '.github/workflows/**'
       - '**/.gitignore'
 
 jobs:
@@ -23,6 +24,6 @@ jobs:
 
     - name: Publish to GitHub Packages
       env:
-        GITHUB_TOKEN: ${{ secrets.GTHB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.PACKAGE_TOKEN }}
       run: mvn deploy
         
