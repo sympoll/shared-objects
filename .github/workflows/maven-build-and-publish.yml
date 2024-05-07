@@ -18,6 +18,9 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
+    - name: Build artifact
+      run: mvn clean install -DskipTests=true
+
     - name: Publish to GitHub Packages
       env:
         GITHUB_TOKEN: ${{ github.token }}
