@@ -3,9 +3,11 @@
     <server>
       <id>github</id>
       <username>ronenii</username>
-      <password>${secrets.GTHB_TOKEN}</password>
+      <security>
+        <provider>PasswordMemory</provider>
+        <password>${env.GH_TOKEN}</password>
+      </security>
     </server>
   </servers>
 </settings>
-
 
