@@ -23,6 +23,6 @@ jobs:
 
     - name: Publish to GitHub Packages
       env:
-        GITHUB_TOKEN: ${{ github.token }}
+        GITHUB_TOKEN: ${{ secrets.GTHB_TOKEN }}
       run: mvn deploy
         
