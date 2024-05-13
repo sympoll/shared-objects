@@ -2,9 +2,11 @@ package com.MTAPizza.Sympoll.object.poll;
 
 import com.MTAPizza.Sympoll.object.group.Group;
 import com.MTAPizza.Sympoll.object.poll.answer.Answer;
+import com.MTAPizza.Sympoll.object.poll.vote.Vote;
 import com.MTAPizza.Sympoll.object.user.User;
 
 import java.util.List;
+import java.util.Map;
 
 public class Poll {
     private int pollID;
@@ -17,6 +19,7 @@ public class Poll {
     private long timeUpdated;
     private long timeEnds;
     private List<Answer> answersList;
+    private List<Vote> votes;
 
     public Poll(List<Answer> answersList) {
         this.answersList = answersList;
