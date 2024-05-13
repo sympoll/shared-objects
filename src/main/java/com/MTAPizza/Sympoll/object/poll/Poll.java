@@ -1,51 +1,34 @@
-package com.MTAPizza.Sympoll.poll;
+package com.MTAPizza.Sympoll.object.poll;
 
+import com.MTAPizza.Sympoll.answer.Answer;
 import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 
-import java.io.Serializable;
+import java.util.List;
 
-
-@Entity
-@Table(name = "polls")
-public class PostgresPoll implements Serializable {
-    @Id
-    @Column(name = "poll_id", nullable = false)
+public class Poll {
     private int pollID;
-    @Column(name = "title", nullable = false)
     private String title;
-    @Column(name = "description")
     private String description;
-    @Column(name = "creator", nullable = false)
-    private String creator;
-    @Column(name = "group_id", nullable = false)
+    private int creatorID;
     private int groupID;
-//    @Column(name = "title", nullable = false)
-//    private int votingID;
-    @Column(name = "num_answers_allowed", nullable = false)
+    private int votingID;
     private int numAnswersAllowed;
-    @Column(name = "time_created")
     private long timeCreated;
-    @Column(name = "time_updated")
     private long timeUpdated;
-    @Column(name = "time_ends")
     private long timeEnds;
+    private List<Answer> answersList;
 
-    public PostgresPoll() {
+    public Poll(List<Answer> answersList) {
+        this.answersList = answersList;
     }
 
-    public PostgresPoll(int pollID, String title, String description, String creator, int groupID, int numAnswersAllowed, long timeCreated, long timeUpdated, long timeEnds) {
-        this.pollID = pollID;
-        this.title = title;
-        this.description = description;
-        this.creator = creator;
-        this.groupID = groupID;
-        this.numAnswersAllowed = numAnswersAllowed;
-        this.timeCreated = timeCreated;
-        this.timeUpdated = timeUpdated;
-        this.timeEnds = timeEnds;
+    public List<Answer> getAnswersList() {
+        return answersList;
+    }
+
+    public void setAnswersList(List<Answer> answersList) {
+        this.answersList = answersList;
     }
 
     public int getPollID() {
@@ -72,12 +55,12 @@ public class PostgresPoll implements Serializable {
         this.description = description;
     }
 
-    public String getCreator() {
-        return creator;
+    public int getCreatorID() {
+        return creatorID;
     }
 
-    public void setCreator(String creator) {
-        this.creator = creator;
+    public void setCreatorID(int creatorID) {
+        this.creatorID = creatorID;
     }
 
     public int getGroupID() {
@@ -86,6 +69,14 @@ public class PostgresPoll implements Serializable {
 
     public void setGroupID(int groupID) {
         this.groupID = groupID;
+    }
+
+    public int getVotingID() {
+        return votingID;
+    }
+
+    public void setVotingID(int votingID) {
+        this.votingID = votingID;
     }
 
     public int getNumAnswersAllowed() {
