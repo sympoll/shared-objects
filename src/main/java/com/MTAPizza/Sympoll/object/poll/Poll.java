@@ -1,8 +1,8 @@
 package com.MTAPizza.Sympoll.object.poll;
 
-import com.MTAPizza.Sympoll.answer.Answer;
-import jakarta.persistence.Column;
-import jakarta.persistence.Id;
+import com.MTAPizza.Sympoll.object.group.Group;
+import com.MTAPizza.Sympoll.object.poll.answer.Answer;
+import com.MTAPizza.Sympoll.object.user.User;
 
 import java.util.List;
 
@@ -10,9 +10,8 @@ public class Poll {
     private int pollID;
     private String title;
     private String description;
-    private int creatorID;
-    private int groupID;
-    private int votingID;
+    private User creator;
+    private Group group;
     private int numAnswersAllowed;
     private long timeCreated;
     private long timeUpdated;
@@ -55,28 +54,20 @@ public class Poll {
         this.description = description;
     }
 
-    public int getCreatorID() {
-        return creatorID;
+    public User getCreator() {
+        return creator;
     }
 
-    public void setCreatorID(int creatorID) {
-        this.creatorID = creatorID;
+    public void setCreator(User creator) {
+        this.creator = creator;
     }
 
-    public int getGroupID() {
-        return groupID;
+    public Group getGroup() {
+        return group;
     }
 
-    public void setGroupID(int groupID) {
-        this.groupID = groupID;
-    }
-
-    public int getVotingID() {
-        return votingID;
-    }
-
-    public void setVotingID(int votingID) {
-        this.votingID = votingID;
+    public void setGroup(Group group) {
+        this.group = group;
     }
 
     public int getNumAnswersAllowed() {
