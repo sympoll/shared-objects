@@ -1,5 +1,6 @@
 package com.MTAPizza.Sympoll.poll;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -10,6 +11,7 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "polls")
+@JsonIgnoreProperties({"hibernateLazyInitializer"})
 public class PostgresPoll implements Serializable {
     @Id
     @Column(name = "poll_id", nullable = false)

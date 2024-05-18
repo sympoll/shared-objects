@@ -4,11 +4,12 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.io.Serializable;
 
 @Entity
 @Table(name = "answer_options")
+@JsonIgnoreProperties({"hibernateLazyInitializer"})
 public class Answer implements Serializable {
     @Id
     @Column(name = "answer_id", nullable = false)
