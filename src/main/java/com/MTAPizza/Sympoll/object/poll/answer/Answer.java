@@ -15,4 +15,44 @@ public class Answer {
         this.answerText = answerText;
         this.numOfVotes = numOfVotes;
     }
+
+    public int getAnswerID() {
+        return answerID;
+    }
+
+    public void setAnswerID(int answerID) {
+        this.answerID = answerID;
+    }
+
+    public int getPollID() {
+        return pollID;
+    }
+
+    public void setPollID(int pollID) {
+        this.pollID = pollID;
+    }
+
+    public int getOrdinal() {
+        return ordinal;
+    }
+
+    public void setOrdinal(int ordinal) {
+        this.ordinal = ordinal;
+    }
+
+    public String getAnswerText() {
+        return answerText;
+    }
+
+    public void setAnswerText(String answerText) {
+        this.answerText = answerText;
+    }
+
+    public int getNumOfVotes() {
+        return numOfVotes;
+    }
+
+    public void setNumOfVotes(int numOfVotes) {
+        this.numOfVotes = numOfVotes;
+    }
 }
