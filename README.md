@@ -1,2 +1,5 @@
-# shared-objects
-This is a DTOs library that is used throughout the project. Contains object DTOs of the polls, users, voting etc.
+# Shared objects
+Shared objects is a library of all the project's common objects (i.e polls, users, votes etc)
+
+## Core
+These are the core object of the application. The program's operations and logic will be executed on and by these objects
